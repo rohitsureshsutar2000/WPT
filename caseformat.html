@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function f1()
+        {
+        let x=document.getElementById("id1").value
+        document.getElementById("p").innerHTML=x;
+        }
+        function f2()
+        {
+            let str= document.getElementById("id1").value
+            let str1=str.toUpperCase();
+            document.getElementById("id11").innerHTML=str1
+        }
+        function f3()
+        {
+             let str= (document.getElementById("id1").value).toLowerCase()
+             document.getElementById("id11").innerHTML=str
+        }
+        function f4()
+        {
+            str1= document.getElementById("id1").value
+
+            document.getElementById("id11").innerHTML=str1.charAt(0).toUpperCase()+str1.substring(1).toLowerCase()
+        }
+        
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+   Enter the name: <input type ="text" value="Firstname" id="id1" >
+   
+   <br>Uppercase <input id=" id2" type = "radio"  name="name1" onclick="f2()"></br>
+   <br>Lowercase <input id="id3" type = "radio" name="name1" onclick="f3()"></br>
+   <br>Titlecase <input id="id4" type = "radio" name="name1" onclick="f4()"></br>
+    <p ><span id="p"></span></p>
+    <p><span id="id11"></span></p>
+</body>
+</html>
