@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Currency converter</title>
+    <script>
+        function cur()
+        {
+            let number=parseInt(document.getElementById("n1").value)
+            let dollar = document.getElementById("sel").value
+            let yen=document.getElementById("sel").value
+            let euros=document.getElementById("sel").value
+            let kuwait=document.getElementById("sel").value
+            let pound=document.getElementById("sel").value
+
+            var symbol ={euro :"&#8364",
+                         dollar:"&#36",
+                         pound:"&#163",
+                         kuwait :"K.D.",
+                         yen :"&#165",
+                          ruble:"&#8381"}
+         
+            let result
+            if(dollar=="D")
+            {
+                result=number*0.012
+                result.toPrecision(3)
+                 document.getElementById("s1").innerHTML=result +" "+ symbol.dollar;
+                 
+            }
+            if(yen=="Y")
+            {
+                result=number*1.74
+                result.toPrecision(3)
+                document.getElementById("s1").innerHTML= result+" "+symbol.yen ;
+                //document.getElementById("s1").innerHTML= result+" "+ "&yen"; 
+                //also you can write like this it will directly show symbol
+            }
+            if(kuwait=="K")
+            {
+                result=number*0.0011
+                result.toPrecision(3)
+                document.getElementById("s1").innerHTML= result  +" "+symbol.kuwait;
+            }
+            if(euros=="E")
+            {
+                result=number*0.011
+                result.toPrecision(3)
+               document.getElementById("s1").innerHTML= result+" "+symbol.euro;
+            }
+            if(pound=="P")
+            {
+                result=number*0.0096
+                result.toPrecision(3)
+                document.getElementById("s1").innerHTML= result+" "+ symbol.pound;
+            }
+            if(pound=="R")
+            {
+                result=number*1.10
+                result.toPrecision(3)
+                document.getElementById("s1").innerHTML= result+" "+ symbol.ruble;
+            }
+        }
+    </script>
+</head>
+<body >
+    <div align="center">
+    <fieldset align="center" style="  width:50%;background-color:rgb(249, 227, 203);">
+        <legend> <b>Currency converter</b></legend>
+    <pre>
+    <b><i>Enter the Amount you want to convert :</i></b><input type="number" style="background-color:rgb(255, 153, 0)" placeholder="enter the number" id="n1" />
+    <br>
+    <b><i>Select the currency :                 </i></b><select  id="sel" style="background-color: rgb(148, 248, 128);" onclick="cur()">
+        <option>currencies</option>
+        <option value="D">Dollar</option>
+        <option value="Y">yen</option>
+        <option value="E">Euros</option>
+        <option value="K">kuwait</option>
+        <option value="P">pound</option>
+        <option value="R">Ruble</option>
+
+    </select>
+   
+    <p><b><i>The Amount you get after the conversion :</i></b><span id="s1"></span></p>    
+    </pre>
+</fieldset>
+</div>
+
+</body>
+</html>
