@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function f1()
+        {
+            let number=parseInt(document.getElementById("number").value)
+            let x=document.getElementById("K").value 
+            let result
+            if(x=="K")
+            {
+                result=number*0.0037
+                result=result+" "+"kd"
+            }
+            if(x=="D")
+            {
+                result=number*0.012
+                result=result+" "+"&#65284;"
+            }
+            if(x=="A")
+            {
+                result=number*1.10
+                result=result+" "+"&#8381;"
+            }
+
+            if(x=="G")
+            {
+                result=number*0.011
+                result=result+" "+"&#8368;"
+            }
+            document.getElementById("display").innerHTML=result
+        }
+        
+    </script>
+</head>
+<body style="background-color: rgb(224, 252, 222);">
+    <div align="center">
+        <fieldset style="background-color: rgb(222, 240, 250);">
+        <legend>Let's do it</legend>
+        <b>Currency Convertor</b><br>
+            Enter Rupee.:-<input id="number" type="number"/>
+            <select onchange="f1()" id="K" >
+                <option >select option</option>
+                <option value="K" >kuwait</option>
+                <option value="D">dollor</option>
+                <option value="A">Russia</option>
+                <option value="G">GERMAN</option>
+            </select>
+            <p><b>Converted currency</b></p>
+        <p id="display"></p>
+        </fieldset>
+    </div>
+</body>
+</html>
