@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="cssforStopWatch.css">
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $().ready(()=>{
+            $(":button").click(()=>{
+                $("#circle").animate({left:"300px"})
+                var div=$("#circle");
+                div.animate({height:"60px" , width:"60px"},"slow");
+                div.animate({height:"70px" , width:"70px"},"slow");
+                div.animate({height:"80px" , width:"80px"},"slow");
+                div.animate({height:"90px" , width:"90px"},"slow")
+
+            })
+
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="circle">
+        
+    </div>
+    <input type="button" value="can we start">
+</body>
+</html>

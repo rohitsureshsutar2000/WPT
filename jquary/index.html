@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssforStopWatch.css">
+   <script src="../jquery-3.6.0.js" ></script>
+ <Script>
+//    $().ready(()=>{
+//     console.log("rohit")
+//    })
+//    console.log("sutar")                  
+
+    let cnt=0;
+    let clear
+    function Start()
+    {
+        clear=setInterval(()=>{
+            cnt++
+            document.getElementById("num").innerHTML=`<b>${cnt}</b>`
+
+        },1000)
+    }
+
+    function stop()
+    {
+        clearInterval(clear)
+    }
+    function reset()
+    {
+        stop()
+        cnt=0;
+        document.getElementById("num").innerHTML=`<b>${cnt}</b>`
+    }
+
+  </Script>
+    <title>Document</title>
+</head>
+<body >
+    <div id="div1" >
+        <p>
+            <input type="button" value="start" onclick="Start()"/><br>
+            <p id="num">0</p><br>
+            <input type="button" value="Stop" onclick="stop()"/>
+            <input type="button" value="Reset" onclick="reset()"/>
+
+        </p>
+    </div>
+</body>
+</html>

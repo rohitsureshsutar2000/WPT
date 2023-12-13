@@ -1,0 +1,22 @@
+#div1{
+    background: rgb(243, 242, 207);
+    text-align  :center;
+    width: 20%;
+    margin-left: 40%;
+    
+}
+#circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: slateblue;
+    background-color: blue;
+}
+#button{
+    height: 20px;
+    width: 90px;
+    /* border-radius: 50%; */
+    color: rgb(241, 171, 255);
+    margin-top: 10%;
+    background-color: rgb(100, 100, 226);
+}
