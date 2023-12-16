@@ -7,14 +7,15 @@
     <script>
         $().ready(()=>{
             $(":button").click(()=>{
-                $("#circle").animate({left:"300px"})
+                $("#circle").animate({left:'300px'})
                 var div=$("#circle");
-                div.animate({height:"60px" , width:"60px"},"slow");
-                div.animate({height:"70px" , width:"70px"},"slow");
-                div.animate({height:"80px" , width:"80px"},"slow");
-                div.animate({height:"90px" , width:"90px"},"slow")
+                div.animate({height:"60px" , width:"60px",marginLeft:"10px"},"slow");
+                div.animate({height:"70px" , width:"70px",marginLeft:"30px"},"slow");
+                div.animate({height:"80px" , width:"80px",marginLeft:"40px"},"slow");
+                div.animate({height:"90px" , width:"90px",marginLeft:"50px"},"slow");
+                div.animate({height:"100px" , width:"100px",marginLeft:"60px"},"slow");
+                div.animate({height:"120px" , width:"120px",marginLeft:"70px"},"slow")
 
-                
             })
 
         })
@@ -22,9 +23,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="circle">
-        
-    </div>
+    
+        <div id="circle" >
+            
+        </div>
+
     <input type="button" value="can we start">
 </body>
 </html>
